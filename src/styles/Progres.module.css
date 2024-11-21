@@ -1,0 +1,36 @@
+.Dots{
+    width: 10px;
+    height: 10px;
+    background-color: #A4DCFF;
+    border-radius: 50%;
+}
+.DotsBlock {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw;
+}
+.Step{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Step div{
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: #A4DCFF;
+    color: #4E326A;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

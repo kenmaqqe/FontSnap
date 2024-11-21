@@ -1,0 +1,22 @@
+.Standart {
+    background: rgb(78,50,106);
+    background: linear-gradient(140deg, rgba(78,50,106,1) 0%, rgba(128,64,190,1) 50%, rgba(78,50,106,1) 100%);
+}
+.Unnable{
+    background: rgb(105,103,107);
+background: linear-gradient(140deg, rgba(105,103,107,1) 0%, rgba(206,200,209,1) 50%, rgba(105,103,107,1) 100%);
+}
+button{
+    height: 56px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16.41px;
+    letter-spacing: 0.75px;
+    color: #fff;
+}
+.Standart:hover{
+    background: #fff;
+    color: #C19DE5;
+    border: solid #C19DE5 1px;
+}
