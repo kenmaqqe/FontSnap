@@ -1,4 +1,4 @@
-import {Modal, Progres} from './Component/components'
+import {Modal, Progres, Header} from './Component/components'
 import {ModalData} from './data/index';
 import './App.css'
 
@@ -9,6 +9,7 @@ const App = () => {
     <div className='wrapper'>
       <Modal description={ModalData[0]} helloModal={true}/>
         <div className='main'>
+          <Header/>
           <Progres stepNumbers={1}/>
         </div>
     </div>
