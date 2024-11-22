@@ -1,19 +1,40 @@
 .Dots{
     width: 10px;
     height: 10px;
-    background-color: #A4DCFF;
+    background-color: #C1BEC3;
     border-radius: 50%;
 }
 .DotsBlock {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+    gap: 10px;
 }
+@media (min-width: 1200px) {
+    .DotsBlock {
+        gap: 20px;
+    }
+}
+@media (min-width: 1400px) {
+    .DotsBlock {
+        gap: 30px;
+    }
+}
+@media (max-width: 1024px){
+    .DotsBlock {
+        display: none;
+    }
+}
+
 .Container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 80vw;
+    background-color: #EEEBF4;
+    border-radius: 8px;
+    padding-top: 25px;
+    padding-right: 85px;
+    padding-left: 85px;
 }
 .Step{
     display: flex;
@@ -25,7 +46,7 @@
     width: 72px;
     height: 72px;
     border-radius: 50%;
-    background-color: #A4DCFF;
+    background-color: #C1BEC3;
     color: #4E326A;
     font-size: 16px;
     font-weight: 600;
@@ -33,4 +54,34 @@
     justify-content: center;
     align-items: center;
     display: flex;
+}
+@media (max-width: 768px){
+    .Container {
+        width: 80vw; 
+        padding-right: 10px;
+        padding-left: 10px;   
+    }
+    .Step div{
+        width:  60px;
+        height: 60px;
+    }
+}
+@media (max-width: 424px){
+    .Step p{
+        display: none;
+    }
+    .Container{
+        padding-bottom: 20px;
+    }
+}
+
+
+.Active div{
+    background-color: #A4DCFF;
+}
+.ActiveDots{
+    background-color: #A4DCFF;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
 }

@@ -9,7 +9,7 @@ const App = () => {
     <div className='wrapper'>
       <Modal description={ModalData[0]} helloModal={true}/>
         <div className='main'>
-          <Progres/>
+          <Progres stepNumbers={1}/>
         </div>
     </div>
   )
