@@ -91,3 +91,28 @@
 .CropButton:hover {
     background-color: #3b2551;
 }
+.Cropped{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.Reset {
+    position: absolute;
+    font-size: 48px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    background-color: rgba(93, 46, 138, 0.8); /* Напівпрозоре накриття */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Вища пріоритетність поверх зображення */
+}
+
+.Cropped:hover .Reset {
+    visibility: visible;
+    cursor: pointer;
+}

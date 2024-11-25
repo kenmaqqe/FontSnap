@@ -4,7 +4,7 @@ import "cropperjs/dist/cropper.css";
 import Modal from "react-modal";
 import { useDispatch } from "react-redux";
 import { setFirstButton, setImages } from '../redux/dataSlice'
-import styles from "../styles/MainAction.module.css";
+import styles from "../styles/UploadImage.module.css";
 import Upload from "../assets/Upload.svg";
 
 
@@ -48,19 +48,14 @@ const MainAction = () => {
 
   const handleCrop = () => {
     if (cropperInstance.current) {
-      const contentElement = document.querySelector(`.${styles.Content}`);
-      const contentHeight = contentElement?.getBoundingClientRect().height || 600;
-  
-      const canvas = cropperInstance.current.getCroppedCanvas({
-        height: contentHeight, // Максимальна висота
-      });
-  
-      setCroppedImage(canvas.toDataURL("image/jpeg"));
+      const canvas = cropperInstance.current.getCroppedCanvas();
+      const cropped = canvas.toDataURL("image/jpeg");
+      setCroppedImage(cropped);
+      dispatch(setImages([cropped])); // Передаємо обрізане зображення в Redux
     }
     setModalOpen(false);
     setPreview(false);
     dispatch(setFirstButton(true));
-    dispatch(setImages(croppedImage));
   };
   
   
@@ -69,7 +64,7 @@ const MainAction = () => {
     cropperInstance.current = null;
     setCroppedImage(null);
     setPreview(true);
-    // Стан image не очищається, щоб користувач міг завантажити нове зображення
+    dispatch(setFirstButton(false));
   }
 
   return (
@@ -89,13 +84,13 @@ const MainAction = () => {
             <span>Upload an image</span>
           </div>
         ) : croppedImage ? (
-          <div>
+          <div className={styles.Cropped}>
             <img
               src={croppedImage}
               alt="Cropped"
               className={styles.CroppedImage}
             />
-            <button onClick={resetCropper}>Reset</button>
+            <button onClick={resetCropper} className={styles.Reset}>Reset</button>
           </div>
         ) : null}
 

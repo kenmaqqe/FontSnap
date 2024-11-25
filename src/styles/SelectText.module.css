@@ -1,0 +1,26 @@
+.Container {
+    height: 40vh;
+    background-color: #EEEBF4;
+    width: 80vw;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Content {
+    width: 96%;
+    height: 90%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    overflow: hidden; /* Перекриває частину, що виходить за межі контейнера */
+}
+
+.KonvaImage {
+    width: 100%;
+    height: auto; /* Ensure the image scales correctly */
+  }
