@@ -20,7 +20,7 @@ const Modal: React.FC<ModalProps> = ({ description, helloModal }) => {
         <div className={styles.Background}></div>
         <div className={styles.Container}>
             <span>{helloModal?<h2>Welcome to</h2>:(null)}{helloModal ? <img src={Logo} alt='logo-image'/>: <img src={Error} alt='error-image'/>}</span>
-            <p>{description}</p>
+            <p>{description.split('\n').map((line, index) => <span key={index}>{line}<br/></span>)}</p>
             <Button children='Okay' active={true} onClick={onClose} width='100%' />
         </div>
     </div>

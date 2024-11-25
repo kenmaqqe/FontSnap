@@ -1,4 +1,6 @@
 export {default as Modal} from './Modal'
 export {default as Progres} from './Progres'
 export {default as Header} from './Header'
-export {default as MainAction} from './MainAction'
+export {default as UploadImage} from './UploadImage'
+export {default as SelectText} from './SelectText'
+export {default as Result} from './Result'

@@ -1,5 +1,6 @@
 import styles from '../styles/Progres.module.css'
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 type ProgresProps = {
     stepNumbers: number;
