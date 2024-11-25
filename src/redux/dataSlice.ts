@@ -8,6 +8,7 @@ const dataSlice = createSlice({
     firstButton: false,
     secondButton: false,
     images: null,
+    textForSearch: '',
   },
   reducers: {
     setSteps: (state, action) => {
@@ -25,8 +26,11 @@ const dataSlice = createSlice({
     setImages : (state, action) => {
       state.images = action.payload;
     },
+    setTextForSearch : (state, action) => {
+      state.textForSearch = action.payload;
+    },
   },
 });
 
-export const { setSteps, setFirstButton, setSecondButton, setAnotherVariable, setImages } = dataSlice.actions; // Експортуємо дії
+export const { setSteps, setFirstButton, setSecondButton, setAnotherVariable, setImages, setTextForSearch } = dataSlice.actions; // Експортуємо дії
 export default dataSlice.reducer;

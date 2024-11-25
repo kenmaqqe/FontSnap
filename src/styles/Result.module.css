@@ -19,8 +19,3 @@
     background-color: #fff;
     overflow: hidden; /* Перекриває частину, що виходить за межі контейнера */
 }
-
-.KonvaImage {
-  width: 100%;
-  height: auto; /* Ensure the image scales correctly */
-}

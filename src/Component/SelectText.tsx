@@ -1,10 +1,11 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import styles from "../styles/SelectText.module.css";
 import Tesseract from "tesseract.js";
 import { Stage, Layer, Rect, Image } from "react-konva";
 import { ModalData } from "../data/index";
 import Modal from "./Modal";
+import { setFirstButton, setTextForSearch } from "../redux/dataSlice";
 
 const SelectText = () => {
   const images = useSelector((state: any) => state.data.images);
@@ -14,6 +15,7 @@ const SelectText = () => {
   const [konvaImage, setKonvaImage] = useState<any>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [showModal, setShowModal] = useState<boolean>(false);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const recognizeText = async () => {
@@ -44,6 +46,7 @@ const SelectText = () => {
 
         if (allBoxes.length === 0) {
           setShowModal(true);
+          dispatch(setFirstButton(false));
         }
       }
     };
@@ -62,8 +65,10 @@ const SelectText = () => {
 
   const handleTextClick = (index: number) => {
     setSelectedBoxIndex(index);
+    dispatch(setTextForSearch(boxes[index].text));
     console.log(`Clicked on text: ${boxes[index].text}`);
   };
+  
 
   return (
     <div className={styles.Container}>
@@ -74,15 +79,15 @@ const SelectText = () => {
             <Image image={konvaImage} />
             {boxes.map((box, index) => (
               <Rect
-                key={index}
-                x={box.x}
-                y={box.y}
-                width={box.width}
-                height={box.height}
-                stroke={selectedBoxIndex === index ? "blue" : "red"}
-                strokeWidth={2}
-                onClick={() => handleTextClick(index)}
-              />
+              key={index}
+              x={box.x}
+              y={box.y}
+              width={box.width}
+              height={box.height}
+              stroke={selectedBoxIndex === index ? "blue" : "red"}
+              strokeWidth={2}
+              onClick={() => handleTextClick(index)}
+            />            
             ))}
           </Layer>
         </Stage>
