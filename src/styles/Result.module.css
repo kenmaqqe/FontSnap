@@ -19,3 +19,30 @@
     background-color: #fff;
     overflow: hidden; /* Перекриває частину, що виходить за межі контейнера */
 }
+.Error {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .StageContainer {
+    position: relative;
+  }
+  
+  .TextBox {
+    position: absolute;
+    border: 5px solid blue;
+    background-color: rgba(0, 0, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+  }
+  
+  .FontData {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }

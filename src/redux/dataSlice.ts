@@ -9,6 +9,7 @@ const dataSlice = createSlice({
     secondButton: false,
     images: null,
     textForSearch: '',
+    textBoxes: [],
   },
   reducers: {
     setSteps: (state, action) => {
@@ -29,8 +30,11 @@ const dataSlice = createSlice({
     setTextForSearch : (state, action) => {
       state.textForSearch = action.payload;
     },
+    setTextBoxes : (state, action) => {
+      state.textBoxes = action.payload;
+    }
   },
 });
 
-export const { setSteps, setFirstButton, setSecondButton, setAnotherVariable, setImages, setTextForSearch } = dataSlice.actions; // Експортуємо дії
+export const { setSteps, setFirstButton, setSecondButton, setAnotherVariable, setImages, setTextForSearch , setTextBoxes } = dataSlice.actions; // Експортуємо дії
 export default dataSlice.reducer;
