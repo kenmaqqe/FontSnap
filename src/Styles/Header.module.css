@@ -1,0 +1,58 @@
+.Header{
+    height: 8vh;
+    display: flex;
+    align-items: center;
+}
+.Container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+.Logo{
+
+}
+.Menu{
+    width: 30%;
+    display: flex;
+
+}
+@media screen (max-width: 1028px){
+    .Menu{
+        width: 40%;
+    }
+}
+@media screen (max-width: 768px){
+    .Menu{
+        width: 50%; 
+    }
+    .Link{
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+@media screen (max-width: 480px){
+    .Menu{
+        width: 60%; 
+    }
+    .Link{
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+.List{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.ListItem{
+
+}
+.Link{
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+}
+.Link:hover{
+    color:blueviolet;
+}
