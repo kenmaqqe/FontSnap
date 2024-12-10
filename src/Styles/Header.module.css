@@ -17,12 +17,12 @@
     display: flex;
 
 }
-@media screen (max-width: 1028px){
+@media (max-width: 1028px){
     .Menu{
         width: 40%;
     }
 }
-@media screen (max-width: 768px){
+@media (max-width: 768px){
     .Menu{
         width: 50%; 
     }
@@ -31,13 +31,13 @@
         font-weight: 500;
     }
 }
-@media screen (max-width: 480px){
+@media (max-width: 480px){
     .Menu{
         width: 60%; 
     }
     .Link{
         font-size: 18px;
-        font-weight: 400;
+        font-weight: 400
     }
 }
 .List{

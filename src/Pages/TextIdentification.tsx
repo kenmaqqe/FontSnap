@@ -1,8 +1,13 @@
 import React from 'react'
+import {Header,Footer} from './../Components/main';
 
 const TextIdentification = () => {
   return (
-    <div>TextIdentification</div>
+    <section>
+    <Header/>
+    Hello
+    <Footer/>
+  </section>
   )
 }
 

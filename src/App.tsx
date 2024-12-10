@@ -7,7 +7,6 @@ import { Header, Footer } from './Components/main';
 const App = () => {
     return (
         <>
-            <Header />
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<MainPage />} />
@@ -21,7 +20,6 @@ const App = () => {
                     />
                 </Routes>
             </BrowserRouter>
-            <Footer />
         </>
     );
 };

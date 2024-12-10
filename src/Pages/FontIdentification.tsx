@@ -1,8 +1,14 @@
 import React from 'react'
+import {Header,Footer} from './../Components/main';
+
 
 const FontIdentification = () => {
   return (
-    <div>FontIdentification</div>
+    <section>
+      <Header/>
+      Hello
+      <Footer/>
+    </section>
   )
 }
 

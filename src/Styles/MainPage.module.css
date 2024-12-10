@@ -1,0 +1,60 @@
+.Buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+.MainPage {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.Text {
+    width: 50vw;
+    margin: 0 auto;
+}
+.Header {
+    height: 8vh;
+    display: flex;
+    align-items: center;
+}
+.Container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+.Logo {
+    width: 30%;
+}
+.Menu {
+    width: 30%;
+    display: flex;
+}
+
+@media (max-width: 1028px) {
+    .Menu {
+        width: 40%; 
+    }        
+}
+
+@media (max-width: 768px) {    
+    .Menu {
+        width: 50%; 
+    }
+    .Link{
+        font-size: 18px;
+    }
+}        
+@media (max-width: 480px) {
+    .Menu {
+        width: 60%; 
+    }
+    .Link{
+        font-size: 16px;
+    }
+}       
